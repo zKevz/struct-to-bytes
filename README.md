@@ -1,13 +1,14 @@
 # Struct-To-Bytes
 Implementation of struct to bytes conversion and vice versa using [serde](https://serde.rs/) framework
 
-## Using
+## Notes
 Before using, make sure to add [serde](https://docs.rs/serde/latest/serde/) in your `Cargo.toml`
-```cargo
+```toml
+[dependencies]
 serde = { version = "1.0", features = ["derive"] }
 ```
 
-Struct to bytes conversion:
+## Struct to bytes conversion:
 ```rust
 #[derive(Serialize, Deserialize)]
 struct Employee {
@@ -30,7 +31,7 @@ let company = Company {
 let bytes = ser::to_bytes(&company).unwrap();
 ```
 
-Bytes to struct conversion:
+## Bytes to struct conversion:
 ```rust
 #[derive(Serialize, Deserialize)]
 struct Employee {
