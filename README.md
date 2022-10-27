@@ -8,7 +8,7 @@ Before using, make sure to add [serde](https://docs.rs/serde/latest/serde/) in y
 serde = { version = "1.0", features = ["derive"] }
 ```
 
-## Struct to bytes conversion:
+## Struct To Bytes Conversion:
 ```rust
 #[derive(Serialize, Deserialize)]
 struct Employee {
@@ -31,7 +31,7 @@ let company = Company {
 let bytes = ser::to_bytes(&company).unwrap();
 ```
 
-## Bytes to struct conversion:
+## Bytes To Struct Conversion:
 ```rust
 #[derive(Serialize, Deserialize)]
 struct Employee {
