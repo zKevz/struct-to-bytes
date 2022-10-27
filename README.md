@@ -56,6 +56,14 @@ pub struct FormatOptions {
     pub short_variant_index: bool,
 }
 ```
+`short_length`:
+* If `true`, strings or sequences size padding will be in 2 bytes
+* If `false`, strings or sequences size padding will be in 4 bytes
+
+`short_variant_index`:
+* If `true`, enum index padding will be in 2 bytes
+* If `false`, enum index padding will be in 4 bytes
+
 Note that you need to call `se::to_bytes_with_options` / `de::from_bytes_with_options` instead of `se::to_bytes` / `de::from_bytes`
 
 ## Developers
