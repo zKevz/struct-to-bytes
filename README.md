@@ -48,5 +48,15 @@ struct Company {
 let company: Company = de::from_bytes(&bytes).unwrap();
 ```
 
+## Format
+The produced output will be in a packed struct format. For strings or sequences, there will be 2 bytes of padding indicating their size or length. However, you can customize your own padding format by using `FormatOptions`.
+```rust
+pub struct FormatOptions {
+    pub short_length: bool,
+    pub short_variant_index: bool,
+}
+```
+Note that you need to call `se::to_bytes_with_options` / `de::from_bytes_with_options` instead of `se::to_bytes` / `de::from_bytes`
+
 ## Developers
 * [kevz](https://github.com/zKevz)
